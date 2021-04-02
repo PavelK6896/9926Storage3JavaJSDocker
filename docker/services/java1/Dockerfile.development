@@ -1,0 +1,4 @@
+FROM bellsoft/liberica-openjdk-alpine-musl:11
+WORKDIR /usr/local/app
+ADD ./../../../9926Rest2JavaSpring/target/9926Rest2JavaSpring-2.4.4.jar app.jar
+CMD java -jar ./app.jar
