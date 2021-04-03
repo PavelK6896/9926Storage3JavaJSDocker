@@ -36,7 +36,15 @@ services:
       dockerfile: Dockerfile.development
     image: 'js-one'
     ports:
-        - 80:80   
-        
+        - 80:80
+
+  js2:
+    build:
+      context: services/js2
+      dockerfile: Dockerfile.development
+    image: 'js-two'
+    ports:
+      - 81:80
+
 volumes:
    db-data:
