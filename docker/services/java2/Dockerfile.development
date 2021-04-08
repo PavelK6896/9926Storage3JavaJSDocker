@@ -1,0 +1,2 @@
+FROM tomcat
+COPY 9932Rest3JavaEE-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/9932Rest3JavaEE-1.0-SNAPSHOT.war
