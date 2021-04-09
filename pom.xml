@@ -11,6 +11,7 @@
     <modules>
         <module>9926Rest2JavaSpring</module>
         <module>9932Rest3JavaEE</module>
+        <module>9933Rest3JavaReactive</module>
     </modules>
 
     <properties>
