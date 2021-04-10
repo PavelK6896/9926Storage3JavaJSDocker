@@ -1,5 +1,5 @@
 import './App.css';
-import {getUser} from "./service/Main";
+import {getUser, getUser3} from "./service/Main";
 import {useState} from "react";
 
 function App() {
@@ -20,6 +20,10 @@ function App() {
                 <br/>
                 <button onClick={get1}>
                     getUser
+                </button>
+                <br/>
+                <button onClick={() => {getUser3().then((r)=> {setState({users1: r})})}}>
+                    getUser3
                 </button>
             </header>
         </div>

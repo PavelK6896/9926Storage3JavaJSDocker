@@ -36,12 +36,27 @@ services:
       dockerfile: Dockerfile.development
 
     environment:
-      - PORT=8080
+      - PORT=8082
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres/vv
       - JS_URL=http://localhost
     image: 'java-two'
     ports:
       - 8080:8080
+    depends_on:
+      - postgres
+
+  java3:
+    build:
+      context: services/java3
+      dockerfile: Dockerfile.development
+#      r2dbc:postgresql://localhost:5433/vv
+    environment:
+      - PORT=8083
+      - SPRING_DATASOURCE_URL=r2dbc:postgresql://postgres/vv
+      - JS_URL=http://localhost
+    image: 'java-three'
+    ports:
+      - 8083:8083
     depends_on:
       - postgres
 
