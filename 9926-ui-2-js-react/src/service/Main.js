@@ -7,6 +7,6 @@ export const getUser = async () => {
 }
 
 export const getUser3 = async () => {
-   return fetch(url3 + '/user').then((d) => d.json())
+   return fetch(url3 + '/api/user').then((d) => d.json())
 }
 

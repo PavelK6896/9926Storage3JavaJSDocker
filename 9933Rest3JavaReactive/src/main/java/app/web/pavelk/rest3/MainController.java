@@ -9,7 +9,7 @@ import reactor.core.publisher.Flux;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/user")
 public class MainController {
 
     private final UserRepository userRepository;
