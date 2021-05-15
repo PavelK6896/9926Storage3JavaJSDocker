@@ -7,10 +7,10 @@ services:
       dockerfile: Dockerfile.development
     ports:
       - "5433:5432"
-#    jdbc:postgresql://localhost:5433/vv
+#    jdbc:postgresql://localhost:5433/db1
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_DB=vv
+      - POSTGRES_DB=db1
       - POSTGRES_PASSWORD=0
     volumes:
       - "db-data:/var/lib/postgresql/data"
@@ -22,7 +22,7 @@ services:
 
     environment:
       - PORT=8081
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres/vv
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres/db1
       - JS_URL=http://localhost
     image: 'java-one'
     ports:
@@ -37,7 +37,7 @@ services:
 
     environment:
       - PORT=8082
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres/vv
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres/db1
       - JS_URL=http://localhost
     image: 'java-two'
     ports:
@@ -52,7 +52,7 @@ services:
 #      r2dbc:postgresql://localhost:5433/vv
     environment:
       - PORT=8083
-      - SPRING_DATASOURCE_URL=r2dbc:postgresql://postgres/vv
+      - SPRING_DATASOURCE_URL=r2dbc:postgresql://postgres/db1
       - JS_URL=http://localhost
     image: 'java-three'
     ports:

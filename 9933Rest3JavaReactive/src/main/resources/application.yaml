@@ -4,6 +4,6 @@ server:
 
 spring:
   r2dbc:
-    url: ${SPRING_DATASOURCE_URL:r2dbc:postgresql://localhost:5433/vv}
+    url: ${SPRING_DATASOURCE_URL:r2dbc:postgresql://localhost:5433/db1}
     username: postgres
     password: 0
